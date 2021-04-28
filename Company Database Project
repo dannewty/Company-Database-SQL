@@ -94,7 +94,7 @@ INSERT INTO branch_supplier VALUES(2, 'Montblanc', 'Writing Utensils');
 INSERT INTO branch_supplier VALUES(3, 'PG Paper', 'Paper');
 INSERT INTO branch_supplier VALUES(2, 'Labels UK', 'Labels');
 INSERT INTO branch_supplier VALUES(3, 'Parker Pen', 'Writing Utensils');
-INSERT INTO branch_supplier VALUES(3, 'PG Paper', 'Paper');
+INSERT INTO branch_supplier VALUES(3, 'BB Paper', 'Paper');
 
 
 --Client
