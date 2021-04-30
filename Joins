@@ -1,1 +1,25 @@
+INSERT INTO branch VALUES(4, 'Sheffield', NULL, NULL);
 
+-- Find all branches and the names of their managers 
+
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+INNER JOIN branch
+ON employee.emp_id = branch.mgr_id
+
+as a result of this inner join there are 3 managers that appear with there employeeID, Fistname and branch name.
+
+
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+LEFT JOIN branch
+ON employee.emp_id = branch.mgr_id
+
+as a result of using the LEFT join. there are the 3 managers but also all employees show from the employee table as this was the parent table.
+
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+RIGHT JOIN branch
+ON employee.emp_id = branch.mgr_id
+
+As a result of using the RIGHT JOIN all branches are now shown. 
