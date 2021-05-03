@@ -1,0 +1,47 @@
+Here i am creating my stored procedure by starting with dbo.sp to indicate that this is a stored procedure, also by calling the proc EmployeeGetAll i am indicating to the user that the results will be from the Employee table.
+
+CREATE PROCEDURE dbo.spEmployeeGetAll
+AS 
+BEGIN 
+	SELECT emp_id, first_name, last_name
+	FROM Employee
+END
+
+EXEC dbo.spEmployeeGetAll
+
+
+Here i will alter the procedure and add a nocount therfore when i execute my procedure it will not give me the amount of rows that have been affected. 
+
+ALTER PROCEDURE dbo.spEmployeeGetAll
+AS 
+BEGIN 
+	SET NOCOUNT ON;
+	SELECT emp_id, first_name, last_name
+	FROM Employee
+END
+
+
+
+Here i will create a new procedure where i will use a variable to limit the result. 
+
+CREATE PROCEDURE dbo.spGetEmployeeByLastName
+	@last_name VARCHAR (40)
+AS 
+BEGIN
+	SELECT emp_id, first_name, last_name 
+	FROM Employee
+	WHERE last_name = @Last_name
+END
+
+EXEC dbo.spGetEmployeeByLastName Walker
+
+
+ALTER PROCEDURE dbo.spGetEmployeeByLastName
+	@last_name VARCHAR (40),
+	@first_name VARCHAR (40)
+AS 
+BEGIN
+	SELECT emp_id, first_name, last_name 
+	FROM Employee
+	WHERE last_name = @Last_name AND first_name = @first_name
+END
