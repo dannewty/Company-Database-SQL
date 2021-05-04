@@ -1,0 +1,37 @@
+Note; i have not duplicated these tables. these are examples to show the different types of constraints 
+
+NOT NULL - by saying not null, the user will not be allowed to use NULL values 
+
+CREATE TABLE Employee
+emp_id INT PRIMARY KEY,
+first_name NOT NULL,
+last_name NOT NULL,
+
+UNIQUE - by using the UNIQUE constraint, this will ensure that all values in a column are different.
+
+CREATE TABLE Employee
+emp_id INT PRIMARY KEY,
+first_name NOT NULL,
+last_name NOT NULL,
+contact_number INT UNIQUE, 
+
+DEFAULT - by using the defualt constraint, this will set a deault value for a column which will be added to all new records. 
+
+
+CREATE TABLE Employee
+emp_id INT PRIMARY KEY,
+first_name NOT NULL,
+last_name NOT NULL,
+contact_number INT UNIQUE, 
+City VARCHAR (20) DEFAULT 'London'
+
+AUTO INCREMENT - Using AUTO INCREMENT will generate a unique number automatically when inserting a new record. for example here i will use AUTO INCREMENT ON emp_id therefore every time a new record gets inserted a new id number will be automatically generated. 
+
+
+
+CREATE TABLE Employee
+emp_id INT PRIMARY KEY AUTO INCREMENT,
+first_name NOT NULL,
+last_name NOT NULL,
+contact_number INT UNIQUE, 
+City VARCHAR (20) DEFAULT 'London'
