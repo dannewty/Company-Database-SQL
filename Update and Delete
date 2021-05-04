@@ -1,0 +1,9 @@
+UPDATE employee 
+SET first_name = 'Jason', last_name = 'Walker' 
+WHERE emp_id = 1
+
+DELETE FROM employee 
+this will delete all rows from th employee table 
+
+DELETE FROM employee
+WHERE emp_id = 5 
